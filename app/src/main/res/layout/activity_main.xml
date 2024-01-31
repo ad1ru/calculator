@@ -64,7 +64,9 @@
                 android:text="@string/percent" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_divide"
                 style="@style/Orange.Button"
+                android:onClick="onOperationClick"
                 android:text="@string/divide" />
         </LinearLayout>
 
@@ -93,7 +95,9 @@
                 android:text="@string/nine" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_multiply"
                 style="@style/Orange.Button"
+                android:onClick="onOperationClick"
                 android:text="@string/multiply" />
         </LinearLayout>
 
@@ -122,7 +126,9 @@
                 android:text="@string/six" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_minus"
                 style="@style/Orange.Button"
+                android:onClick="onOperationClick"
                 android:text="@string/minus" />
         </LinearLayout>
 
@@ -180,7 +186,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_equal"
                 style="@style/Orange.Button"
-                android:onClick="onOperationClick"
+                android:onClick="onEqualClick"
                 android:text="@string/equal" />
         </LinearLayout>
 
