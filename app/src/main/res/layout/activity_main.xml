@@ -13,6 +13,18 @@
         app:layout_constraintBottom_toTopOf="@id/container"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/forward_btn"
+            android:layout_width="112dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/sf_pro_bold"
+            android:text="@string/forward"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

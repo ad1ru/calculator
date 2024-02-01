@@ -5,4 +5,11 @@
     <color name="orange">#FF9E0A</color>
     <color name="grey">#A5A5A5</color>
     <color name="dark_grey">#333333</color>
+    <color name="dark_blue">#28323B</color>
+    <color name="blue_gradient_btn_start">#4486F1</color>
+    <color name="blue_gradient_btn_end">#702DFF</color>
+    <color name="blue">#2F80ED</color>
+    <color name="green_gradient_bar_start">#4CFF48</color>
+    <color name="green_gradient_bar_end">#AC4800</color>
+    <color name="red">#D50000</color>
 </resources>

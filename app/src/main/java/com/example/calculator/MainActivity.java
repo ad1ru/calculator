@@ -2,8 +2,10 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
@@ -24,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text_view);
+
+        findViewById(R.id.forward_btn).setOnClickListener(v -> {
+            String data = textView.getText().toString();
+            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+            intent.putExtra("key1", data);
+            startActivity(intent);
+
+        });
     }
 
     public void onNumberClick(View view) {
@@ -67,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     public void onEqualClick(View view) {
         String data = textView.getText().toString();
         secondOperand = Integer.valueOf(data);
+        Button button = findViewById(R.id.forward_btn);
         if (isOperationPlus) {
             Integer result = firstOperand + secondOperand;
             textView.setText(result.toString());
@@ -83,6 +94,11 @@ public class MainActivity extends AppCompatActivity {
             Integer result = firstOperand / secondOperand;
             textView.setText(result.toString());
             isOperationDivide = false;
+        }
+        if (view.getId() == R.id.btn_equal && Integer.valueOf(data) != 0) {
+            button.setVisibility(View.VISIBLE);
+        } else {
+            button.setVisibility(View.GONE);
         }
         isOperationClick = true;
     }
